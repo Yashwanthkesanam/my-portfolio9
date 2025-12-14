@@ -106,8 +106,7 @@ export const metadata: Metadata = {
   },
 
   verification: {
-    // Add these after you verify with Google/Bing
-    // google: "your-google-verification-code",
+    google: "6r93yps7-Klf9pfP8WgW3aXw9jyldt73U_MTRgvdjl8",
     // bing: "your-bing-verification-code",
   },
 
