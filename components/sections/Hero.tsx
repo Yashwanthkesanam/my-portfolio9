@@ -14,6 +14,7 @@ const slides = [
 export default function Hero() {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -22,7 +23,21 @@ export default function Hero() {
         return () => clearInterval(timer);
     }, []);
 
-    // Track mouse movement
+    // Track window size (client-side only)
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+
+            const handleResize = () => {
+                setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+            };
+
+            window.addEventListener('resize', handleResize);
+            return () => window.removeEventListener('resize', handleResize);
+        }
+    }, []);
+
+    // Track mouse movement (client-side only)
     useEffect(() => {
         const handleMouseMove = (e: MouseEvent) => {
             setMousePosition({ x: e.clientX, y: e.clientY });
@@ -36,12 +51,12 @@ export default function Hero() {
         <section id="home" className="min-h-screen flex items-center bg-black relative overflow-hidden pt-20 px-4 md:px-6">
             {/* Interactive Particle Grid Background */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                {Array.from({ length: 50 }).map((_, i) => {
+                {windowSize.width > 0 && Array.from({ length: 50 }).map((_, i) => {
                     const x = (i % 10) * 10;
                     const y = Math.floor(i / 10) * 20;
                     const distance = Math.sqrt(
-                        Math.pow(mousePosition.x - (x * window.innerWidth / 100), 2) +
-                        Math.pow(mousePosition.y - (y * window.innerHeight / 100), 2)
+                        Math.pow(mousePosition.x - (x * windowSize.width / 100), 2) +
+                        Math.pow(mousePosition.y - (y * windowSize.height / 100), 2)
                     );
                     const scale = Math.max(0.5, 1 - distance / 500);
 
@@ -56,8 +71,8 @@ export default function Hero() {
                             animate={{
                                 scale: scale,
                                 opacity: scale * 0.8,
-                                x: (mousePosition.x - window.innerWidth / 2) / 50,
-                                y: (mousePosition.y - window.innerHeight / 2) / 50,
+                                x: (mousePosition.x - windowSize.width / 2) / 50,
+                                y: (mousePosition.y - windowSize.height / 2) / 50,
                             }}
                             transition={{
                                 type: "spring",
