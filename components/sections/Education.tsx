@@ -38,7 +38,7 @@ export default function Education() {
                                 <div className="flex-grow">
                                     <div className="flex justify-between items-start">
                                         <span className="text-primary font-mono text-sm md:text-base font-bold tracking-widest uppercase mb-2 block">Sept 2022 – March 2026</span>
-                                        <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-primary font-bold">
+                                        <span className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-primary font-bold">
                                             CGPA: 8.0
                                         </span>
                                     </div>
