@@ -23,7 +23,7 @@ export default function Footer() {
                     </Link>
                     {/* GitHub link if available, assuming yes for a dev */}
                     <Link
-                        href="https://github.com/yashwanthkesanam"
+                        href="https://github.com/Yashwanthkesanam"
                         target="_blank"
                         className="text-gray-400 hover:text-blue-500 transition-colors"
                         aria-label="GitHub"

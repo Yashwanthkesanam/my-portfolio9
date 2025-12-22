@@ -61,12 +61,12 @@ export default function Contact() {
                         viewport={{ once: true }}
                         transition={{ delay: 0.3 }}
                     >
-                        <Link href="https://github.com/Yashwanth-Kesanam" target="_blank" className="flex flex-col items-center group">
+                        <Link href="https://github.com/Yashwanthkesanam" target="_blank" className="flex flex-col items-center group">
                             <div className="w-20 h-20 bg-zinc-900/80 rounded-full flex items-center justify-center mb-6 group-hover:bg-zinc-800 transition-colors duration-300 ring-1 ring-white/5 group-hover:ring-primary/50">
                                 <Github className="text-primary" size={28} />
                             </div>
                             <h3 className="text-white font-bold tracking-[0.2em] uppercase mb-2 text-sm">Github</h3>
-                            <p className="text-primary/70 text-xs md:text-sm group-hover:text-primary transition-colors">Yashwanth-Kesanam</p>
+                            <p className="text-primary/70 text-xs md:text-sm group-hover:text-primary transition-colors">Yashwanthkesanam</p>
                         </Link>
                     </motion.div>
 

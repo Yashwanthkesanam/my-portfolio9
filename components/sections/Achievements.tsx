@@ -24,7 +24,8 @@ const achievements = [
     {
         title: "2nd Place - Project Expo on Engineering Day",
         role: "College Level",
-        date: ""
+        date: "",
+        image: "/achievements/project-expo.png"
     }
 ];
 
