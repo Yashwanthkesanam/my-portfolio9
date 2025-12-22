@@ -1,8 +1,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import SectionTitle from '@/components/ui/SectionTitle';
 import { GraduationCap, MapPin } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Education() {
     return (
@@ -23,8 +25,14 @@ export default function Education() {
                             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
 
                             <div className="relative z-10 flex flex-col md:flex-row gap-8 items-start md:items-center">
-                                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center text-black shadow-lg shadow-yellow-500/20 shrink-0 rotate-3 group-hover:rotate-6 transition-transform">
-                                    <GraduationCap size={32} />
+                                <div className="w-16 h-16 rounded-xl flex items-center justify-center overflow-hidden shadow-lg shadow-yellow-500/20 shrink-0 rotate-3 group-hover:rotate-6 transition-transform text-black bg-white">
+                                    <Image
+                                        src="/education/pscmrlogo.png"
+                                        alt="PSCMR Logo"
+                                        width={64}
+                                        height={64}
+                                        className="object-contain p-1"
+                                    />
                                 </div>
 
                                 <div className="flex-grow">
