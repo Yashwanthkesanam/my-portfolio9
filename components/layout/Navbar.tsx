@@ -11,6 +11,7 @@ const navLinks = [
     { name: 'Skills', href: '#skills' },
     { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
+    { name: 'Education', href: '#education' },
     { name: 'Contact', href: '#contact' },
 ];
 
@@ -194,8 +195,8 @@ export default function Navbar() {
                                             href={link.href}
                                             onClick={() => setIsOpen(false)}
                                             className={`block text-lg font-bold p-4 rounded-xl transition-colors ${activeSection === link.href.substring(1)
-                                                    ? 'bg-yellow-400 text-black'
-                                                    : 'bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white'
+                                                ? 'bg-yellow-400 text-black'
+                                                : 'bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white'
                                                 }`}
                                         >
                                             {link.name}
