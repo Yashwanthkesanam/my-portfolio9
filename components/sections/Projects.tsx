@@ -8,6 +8,7 @@ const projects = [
         description: 'Full-stack application simulating real-world flight booking with dynamic pricing and seat availability.',
         tags: ['Python', 'Full Stack', 'Web Dev'],
         github: 'https://github.com/Yashwanthkesanam/skyfly-dynamic-flight-booking.git',
+        link: 'https://ykflys.vercel.app',
         image: '/projects/flight.png',
     },
     {
